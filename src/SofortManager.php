@@ -24,6 +24,7 @@ namespace BrianFaust\Sofort;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
+use Sofort\SofortLib\Sofortueberweisung;
 
 class SofortManager extends AbstractManager
 {
@@ -54,7 +55,7 @@ class SofortManager extends AbstractManager
      *
      * @return mixed
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): Sofortueberweisung
     {
         return $this->factory->make($config);
     }
@@ -64,7 +65,7 @@ class SofortManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'sofort';
     }
@@ -74,7 +75,7 @@ class SofortManager extends AbstractManager
      *
      * @return \BrianFaust\Sofort\SofortFactory
      */
-    public function getFactory()
+    public function getFactory(): SofortFactory
     {
         return $this->factory;
     }

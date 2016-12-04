@@ -32,9 +32,9 @@ class SofortFactory
      *
      * @param array $config
      *
-     * @return \Sofort\Sofort
+     * @return \Sofort\SofortLib\Sofortueberweisung
      */
-    public function make(array $config)
+    public function make(array $config): Sofortueberweisung
     {
         $config = $this->getConfig($config);
 
@@ -50,7 +50,7 @@ class SofortFactory
      *
      * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         $keys = ['key'];
 
@@ -68,9 +68,9 @@ class SofortFactory
      *
      * @param array $auth
      *
-     * @return \Sofort\Sofort
+     * @return \Sofort\SofortLib\Sofortueberweisung
      */
-    protected function getClient(array $auth)
+    protected function getClient(array $auth): Sofortueberweisung
     {
         return new Sofortueberweisung($auth['key']);
     }

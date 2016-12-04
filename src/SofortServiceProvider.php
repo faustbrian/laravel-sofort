@@ -52,7 +52,7 @@ class SofortServiceProvider extends ServiceProvider
     /**
      * Register the factory class.
      */
-    protected function registerFactory()
+    protected function registerFactory(): string
     {
         $this->app->singleton('sofort.factory', function () {
             return new SofortFactory();
@@ -64,7 +64,7 @@ class SofortServiceProvider extends ServiceProvider
     /**
      * Register the manager class.
      */
-    protected function registerManager()
+    protected function registerManager(): string
     {
         $this->app->singleton('sofort', function (Container $app) {
             $config = $app['config'];
@@ -79,7 +79,7 @@ class SofortServiceProvider extends ServiceProvider
     /**
      * Register the bindings.
      */
-    protected function registerBindings()
+    protected function registerBindings(): string
     {
         $this->app->bind('sofort.connection', function (Container $app) {
             $manager = $app['sofort'];
