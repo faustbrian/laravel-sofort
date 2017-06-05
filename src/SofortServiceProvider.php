@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Sofort.
  *
@@ -22,22 +19,24 @@ class SofortServiceProvider extends ServiceProvider
     /**
      * Boot the service provider.
      */
-    public function boot(): void
+    public function boot()
     {
-        $source = realpath(__DIR__.'/../config/sofort.php');
-
-        $this->publishes([$source => config_path('sofort.php')]);
-
-        $this->mergeConfigFrom($source, 'sofort');
+        $this->publishes([
+            __DIR__.'/../config/laravel-sofort.php' => config_path('laravel-sofort.php'),
+        ]);
     }
 
     /**
      * Register the service provider.
      */
-    public function register(): void
+    public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-sofort.php', 'laravel-sofort');
+
         $this->registerFactory();
+
         $this->registerManager();
+
         $this->registerBindings();
     }
 

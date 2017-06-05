@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Sofort.
  *
@@ -59,7 +56,7 @@ class SofortManager extends AbstractManager
      */
     protected function getConfigName(): string
     {
-        return 'sofort';
+        return 'laravel-sofort';
     }
 
     /**
