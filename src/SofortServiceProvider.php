@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Sofort;
 
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container\Container;
 
 class SofortServiceProvider extends ServiceProvider
 {
