@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Sofort;
 
-use Sofort\SofortLib\Sofortueberweisung;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
+use Sofort\SofortLib\Sofortueberweisung;
 
 class SofortManager extends AbstractManager
 {
