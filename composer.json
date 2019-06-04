@@ -1,16 +1,23 @@
 {
     "name": "artisanry/sofort",
     "description": "A Sofort bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Sofort", "Laravel Sofort"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-Sofort",
+        "Laravel Sofort"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^5.7",
+        "php": "^7.2",
+        "illuminate/support": "^5.8",
         "graham-campbell/manager": "^4.1",
         "sofort/sofortlib-php": "^3.3"
     },
