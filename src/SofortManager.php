@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Sofort.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Sofort;
+namespace Artisanry\Sofort;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
@@ -22,7 +22,7 @@ class SofortManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \BrianFaust\Sofort\SofortFactory
+     * @var \Artisanry\Sofort\SofortFactory
      */
     private $factory;
 
@@ -30,7 +30,7 @@ class SofortManager extends AbstractManager
      * Create a new Sofort manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \BrianFaust\Sofort\SofortFactory        $factory
+     * @param \Artisanry\Sofort\SofortFactory        $factory
      */
     public function __construct(Repository $config, SofortFactory $factory)
     {
@@ -64,7 +64,7 @@ class SofortManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \BrianFaust\Sofort\SofortFactory
+     * @return \Artisanry\Sofort\SofortFactory
      */
     public function getFactory(): SofortFactory
     {

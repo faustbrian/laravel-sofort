@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-sofort",
+    "name": "artisanry/sofort",
     "description": "A Sofort bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Sofort", "Laravel Sofort", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Sofort", "Laravel Sofort"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Sofort\\": "src/"
+            "Artisanry\\Sofort\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Sofort\\": "tests"
+            "Artisanry\\Tests\\Sofort\\": "tests"
         }
     },
     "config": {
@@ -39,10 +39,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Sofort\\SofortServiceProvider"
+                "Artisanry\\Sofort\\SofortServiceProvider"
             ],
             "aliases": {
-                "Sofort": "BrianFaust\\Sofort\\Facades\\Sofort"
+                "Sofort": "Artisanry\\Sofort\\Facades\\Sofort"
             }
         }
     },
