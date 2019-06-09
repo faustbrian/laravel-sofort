@@ -30,7 +30,7 @@ class SofortManager extends AbstractManager
      * Create a new Sofort manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Artisanry\Sofort\SofortFactory        $factory
+     * @param \Artisanry\Sofort\SofortFactory         $factory
      */
     public function __construct(Repository $config, SofortFactory $factory)
     {
